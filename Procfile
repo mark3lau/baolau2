@@ -1,0 +1,1 @@
+web: gunicorn baolau2.wsgi
