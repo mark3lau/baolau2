@@ -4,44 +4,89 @@
 <html lang="en" class="h-100">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Baolau</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Thorin &amp; Company</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </nav>
-
-<!-- Page Header -->
-<header class="masthead" style="background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fadc668e-5f6a-4648-9d27-e91eb6973da7/d5nay7b-9991c1db-0f4a-4f3f-a95a-0b53947a14f9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ZhZGM2NjhlLTVmNmEtNDY0OC05ZDI3LWU5MWViNjk3M2RhN1wvZDVuYXk3Yi05OTkxYzFkYi0wZjRhLTRmM2YtYTk1YS0wYjUzOTQ3YTE0ZjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.eknvKAWOPVaW_j6s7cbG6EKi-TGwolEaaTetCmjNYUA')">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>Thorin &amp; Company</h1>
-            <span class="subheading">Thorin and his company of dwarves</span>
-          </div>
-        </div>
-      </div>
-    </div>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <ul>
+        <li><a href="#menu">Sign In</a></li>
+        <li><a href="#about">Our Food</a></li>
+        <li><a href="#contact">Come Find Us</a></li>
+      </ul>
+    </nav>
+    <h1>Baolau</h1>
+    <p>
+      Indulge in the ultimate dining experience with our authentic 
+      and meticulously crafted Chinese cuisine, expertly prepared by 
+      our world-class chefs using only the finest ingredients.
+    </p>
   </header>
 
-<main class="flex-shrink-0 main-bg">
-    {% block content %}
-    <!-- Content Goes here -->
-    {% endblock content %}
-</main>
-    
+  <main>
+    <section id="menu">
+      <h2>Our Food</h2>
+      <p>The food at our Chinese restaurant is a true reflection of the 
+        diverse and rich culinary traditions of China. Our menu features 
+        a variety of classic dishes all made with the freshest and 
+        highest quality ingredients.
+
+        Each dish is expertly prepared by our skilled chefs who have 
+        honed their craft over years of experience. Whether you're 
+        in the mood for a steaming hot bowl of Wonton soup, a delicious 
+        fried rice or a succulent char siu pork, we guarantee that you will 
+        be blown away by the flavors and aromas of our authentic dishes. 
+      </p>
+    </section>
+    <section id="contact">
+      <h2>Come Find Us</h2>
+      <p>We believe that dining should be an experience, not just a meal, 
+        and we strive to provide a warm and inviting atmosphere to 
+        complement our exquisite food. Come visit us and discover why 
+        our restaurant is a favorite among food lovers everywhere.</p>
+    </section>
+  </main>
+
+  <footer>
+    <ul class="social-networks">
+        <li>
+            <a href="https://facebook.com" target="_blank" rel="noopener"
+                aria-label="Visit our Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com" target="_blank" rel="noopener"
+                aria-label="Visit our Twitter page (opens in a new tab)"><i class="fa-brands fa-twitter-square"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://instagram.com" target="_blank" rel="noopener"
+                aria-label="Visit our Instagram page (opens in a new tab)"><i
+                    class="fa-brands fa-instagram-square"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://youtube.com" target="_blank" rel="noopener"
+                aria-label="Visit our YouTube page (opens in a new tab)"><i class="fa-brands fa-youtube-square"></i>
+            </a>
+        </li>
+        <li>
+            <a href="https://linkedin.com" target="_blank" rel="noopener"
+                aria-label="Visit our LinkedIn page (opens in a new tab)"><i class="fa-brands fa-linkedin"></i>
+            </a>
+        </li>
+    </ul>
+    <p>Copyright &copy; Baolau 2023</p>
+</footer>
+
 </body>
+
 </html>
