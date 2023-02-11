@@ -12,47 +12,65 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <ul>
-        <li><a href="#menu">Sign In</a></li>
-        <li><a href="#about">Our Food</a></li>
-        <li><a href="#contact">Come Find Us</a></li>
-      </ul>
-    </nav>
-    <h1>Baolau</h1>
-    <p>
-      Indulge in the ultimate dining experience with our authentic 
-      and meticulously crafted Chinese cuisine, expertly prepared by 
-      our world-class chefs using only the finest ingredients.
-    </p>
-  </header>
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+		<div class="container">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+	        <i class="fas fa-bars"></i>
+	    </button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Sign In</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Our Food</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Come Find Us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<!-- Page Header -->
+	<header>
+    <div>
+      <img src="/static/img/park-chinois-chinese-new-year.jpg" alt="chinese food" class="hero-image">
+    </div> 
+
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg- col-md-10 mx-auto">
+					<div class="site-heading">
+						<h1>Baolau</h1>
+              <span class="subheading">
+                Indulge in the ultimate dining experience with our authentic 
+                and meticulously crafted Chinese cuisine, expertly prepared by 
+                our world-class chefs using only the finest ingredients.
+              </span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 
   <main>
-    <section id="menu">
-      <h2>Our Food</h2>
-      <p>The food at our Chinese restaurant is a true reflection of the 
-        diverse and rich culinary traditions of China. Our menu features 
-        a variety of classic dishes all made with the freshest and 
-        highest quality ingredients.
-
-        Each dish is expertly prepared by our skilled chefs who have 
-        honed their craft over years of experience. Whether you're 
-        in the mood for a steaming hot bowl of Wonton soup, a delicious 
-        fried rice or a succulent char siu pork, we guarantee that you will 
-        be blown away by the flavors and aromas of our authentic dishes. 
-      </p>
-    </section>
-    <section id="contact">
-      <h2>Come Find Us</h2>
-      <p>We believe that dining should be an experience, not just a meal, 
-        and we strive to provide a warm and inviting atmosphere to 
-        complement our exquisite food. Come visit us and discover why 
-        our restaurant is a favorite among food lovers everywhere.</p>
-    </section>
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock content %}
   </main>
 
   <footer>
@@ -86,6 +104,10 @@
     </ul>
     <p>Copyright &copy; Baolau 2023</p>
 </footer>
+
+<!-- font awesome script -->
+    
+<script src="https://kit.fontawesome.com/5bebe14865.js" crossorigin="anonymous"></script>
 
 </body>
 
