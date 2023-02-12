@@ -3,50 +3,77 @@
 {% block content %}
 
 <main>
+
+    <div class="subheading">
+        Indulge in the ultimate dining experience with our authentic
+        and meticulously crafted Chinese cuisine, expertly prepared by
+        our world-class chefs using only the finest ingredients.
+    </div>
+
     <div id="about">
         <span class="our-food">
             <h2>Our Food</h2>
             <br>
-            <p>The food at our Chinese restaurant is a true reflection of the 
-                diverse and rich culinary traditions of China. Our menu features 
-                a variety of classic dishes all made with the freshest and 
-                highest quality ingredients.
-
-                Each dish is expertly prepared by our skilled chefs who have 
-                honed their craft over years of experience. Whether you're 
-                in the mood for a steaming hot bowl of Wonton soup, a delicious 
-                fried rice or a succulent char siu pork, we guarantee that you will 
-                be blown away by the flavors and aromas of our authentic dishes. 
+            <p>The food at our Chinese restaurant is a true reflection of the
+                diverse and rich culinary traditions of China. Our menu features
+                a variety of classic dishes expertly prepared by our skilled chefs who have
+                honed their craft over years of experience.
+                <br>
+                <br>
+                Whether you're in the mood for a steaming hot bowl of Wonton soup, a delicious
+                fried rice or a succulent char siu pork, we guarantee that you will
+                be blown away by the flavors and aromas of our authentic dishes.
             </p>
         </span>
 
-        <span class="register">
+        <span class="register-container">
+        <div class="register-text">
             <h3>
-                Want to make a reservation? 
+                Want to make a reservation?
             </h3>
-            <a href="" class="register-link">
+        </div>
+        <br>
+        <br>
+        <div class="register-link">
+            <a href="">
                 <h5>Create an account or sign in here!</h5>
             </a>
+        </div>
         </span>
     </div>
-    
+
     <div>
         <img src="/static/img/chinese-food.jpg" alt="chinese food" class="hero-image">
-    </div> 
+    </div>
 
     <div id="contact">
         <span class="contact-details">
             <h2>Come Find Us</h2>
             <br>
-            <p>We believe that dining should be an experience, not just a meal, 
-                and we strive to provide a warm and inviting atmosphere to 
-                complement our exquisite food. Come visit us and discover why 
+            <p>We believe that dining should be an experience, not just a meal,
+                and we strive to provide a warm and inviting atmosphere to
+                complement our exquisite food. Come visit us and discover why
                 our restaurant is a favorite among food lovers everywhere.
             </p>
+            <p>
+                Address:
+                <br>
+                Parsons Green, London, SW6
+                <br>
+                <br>
+                Opening hours:
+                <br>
+                Mon-Fri : 6:00pm - 11:00pm
+                Sat-Sun : 12:00pm - 11:00pm
+            </p>
         </span>
-        <span class="map">
+        <span class="address">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9940.737940715091!2d-0.199893!3d51.4731279!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760f9d524c1225%3A0x253c1fe86dd4592b!2sParsons%20Green%2C%20Parsons%20Grn%2C%20London%20SW6%204UL!5e0!3m2!1sen!2suk!4v1676201952688!5m2!1sen!2suk"
+                width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="parsons green"></iframe>
         </span>
     </div>
-  </main>
+</main>
 
 {%endblock%}
