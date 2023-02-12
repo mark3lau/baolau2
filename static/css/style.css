@@ -1,97 +1,117 @@
-/* body {
-    font-family: montserrat alternates, sans-serif;
-  } */
-  
-  header {
-    text-align: center;
-    width: 100%;
-    background: no-repeat;
-    object-fit: cover;
-    padding: 1rem;
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
   }
 
-  .hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.wall-tile-container {
+  background-image: url(/static/img/chinese-wall-tile_2.jpg);
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  opacity: 0.5;
+}
 
-  h1 {
-    font-family: 'montserrat alternates', sans-serif;
-    font-size: 500%;
-    letter-spacing: 2px;
-    font-weight: 800;
-    color: rgb(165, 15, 15);;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    background-color: #333;
-  }
-  
-  nav a {
-    display: block;
-    padding: 1rem;
-    color: #fff;
-    text-decoration: none;
-  }
+.site-heading {
+  position: absolute;
+  top: 13%;
+  left: 2%;
+}
+
+h1 {
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 2px;
+  color: rgb(165, 15, 15);;
+  text-align: left;
+  opacity: 1;
+  text-transform: uppercase;
+  font-size: 300px;
+}
+
+.subheading {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+}
+
+#main-nav {
+  margin-left: 65%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-weight: bold;
+}
+
+nav a {
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+}
 
 #about {
-    display: flex;
-    padding: 2rem;
+  display: flex;
+  padding: 2rem;
 }
 
 .our-food {
-    width: 48%;
-    height: 70%;
-}
-
-.line-break {
-    width: 2px;
-    height: 50%;
-    background-color: rgb(165, 15, 15);
-    position: absolute;
-    left: 50%;
+  width: 48%;
+  height: 70%;
+  padding: 10px;
+  border-right: 2px solid rgb(165, 15, 15);
 }
 
 .register {
-    width: 48%;
-    height: 70%;
-    position: static;
+  width: 48%;
+  height: 70%;
+  padding: 10px;
+  position: static;
+  text-align: center;
 }
 
 #contact {
-    display: flex;
-    padding: 2rem;
+  display: flex;
+  padding: 2rem;
 }
 
+.hero-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
 
-  /* Social media links */
+/* Social media links */
 
 footer {
-    height: 10%;
-    border-top: 10px solid rgb(165, 15, 15);
+  height: 1%;
+  border-top: 5px solid rgb(165, 15, 15);
 }
 
 .social-networks {
-    text-align: center;
+  text-align: center;
+  margin-bottom: 2px;
 }
 
-.social-networks > li {
-    display: inline;
+.social-networks>li {
+  display: inline;
 }
 
 .social-networks i {
-    font-size: 250%;
-    padding: 3%;
-    color: rgb(165, 15, 15);
+  font-size: 170%;
+  padding: 20px;
+  color: rgb(165, 15, 15);
 }
 
 .social-networks i:hover {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
-  
+
+.copyright {
+  text-align: right;
+  margin: 2px;
+  font-size: small;
+}
