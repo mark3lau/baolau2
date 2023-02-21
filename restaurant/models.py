@@ -1,43 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
-STATUS = ((0, "Draft"), (1, "Published"))
-
-
-class Review(models.Model):
-    title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="reviews")
-    featured_image = CloudinaryField('image', default='placeholder')
-    excerpt = models.TextField(blank=True)
-    updated_on = models.DateTimeField(auto_now=True)
-    content = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name='review_likes', blank=True)
-
-    class Meta:
-        ordering = ["-created_on"]
-
-    def __str__(self):
-        return self.title
-
-    def number_of_likes(self):
-        return self.likes.count()
-
-
-class Comment(models.Model):
-    review = models.ForeignKey(Review, on_delete=models.CASCADE, related_name="comments")
+class Booking(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()
-    body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
-
+    number_of_people = models.IntegerField(default=1, validators=[MinValueValidator(1),MaxValueValidator(10)])
+    booking_date = models.DateField()
+    booking_time = models.TimeField()
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    
     class Meta:
-        ordering = ["created_on"]
-
-    def __str__(self):
-        return f"Comment {self.body} by {self.name}"
+        ordering = ["-booking_date"]
