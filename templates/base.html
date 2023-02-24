@@ -34,7 +34,10 @@
                 </li>
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'your_booking' %}">Bookings</a>
+                  <a class="nav-link" href="{% url 'make_booking' %}">Make A Booking</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'your_booking' %}">View Your Bookings</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>

@@ -11,7 +11,7 @@ class Booking(models.Model):
     number_of_people = models.IntegerField(default=1, validators=[MinValueValidator(1),MaxValueValidator(10)])
     booking_date = models.DateField()
     booking_time = models.TimeField()
-    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True, default=None)
     
     class Meta:
         ordering = ["-booking_date"]
