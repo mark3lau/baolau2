@@ -36,6 +36,8 @@ class MakeBooking(CreateView):
             if form.is_valid():
                 form.save()
             return render(request, 'your_booking.html', context)
+        else:
+            return render (request, 'make_booking.html')
 
 
 class UpdateBooking(UpdateView):
@@ -52,8 +54,7 @@ class DeleteBooking(DeleteView):
 
 
     
-        # else:
-        #     return render (request, 'make_booking.html')
+ 
 
 
 # {'form':form}
