@@ -10,5 +10,6 @@ class BookingForm(forms.ModelForm):
             'preferred_date': forms.DateInput(attrs={'type': 'date'}),
             'preferred_time': forms.TimeInput(attrs={'type': 'time'})
         }
+        exclude = ['created_by_id']
 
 

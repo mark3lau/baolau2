@@ -14,6 +14,7 @@ class Booking(models.Model):
     
     class Meta:
         ordering = ["-booking_date"]
+    
 
 
 

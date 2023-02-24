@@ -49,12 +49,11 @@ class UpdateBooking(UpdateView):
 
 class DeleteBooking(DeleteView):
     model = Booking
-    template_name = 'your_booking.html'
+    template_name = 'confirm_delete.html'
     success_url = reverse_lazy('your_booking')
 
-
-    
+    def delete(self, request, *args, **kwargs):
+        Booking = get_object_or_404(Booking, pk=kwargs['pk'], user=request.user)
+        Booking.delete()
+        return super().delete(request, *args, **kwargs)
  
-
-
-# {'form':form}

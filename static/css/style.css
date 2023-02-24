@@ -135,7 +135,7 @@ nav a {
 footer {
   height: 1%;
   border-top: 5px solid rgb(165, 15, 15);
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   right: 0;
