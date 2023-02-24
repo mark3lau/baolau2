@@ -23,12 +23,12 @@ class MakeBooking(generic.ListView):
     paginate_by = 6
 
 
-def booking(request):
+def booking_view(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'your_booking')
+            return render(request, 'templates/your_booking.html')
     else:
         form = BookingForm()
-    return render(request, 'make_booking', {'form': form})
+    return render(request, 'templates/make_booking.html', {'form': form})
