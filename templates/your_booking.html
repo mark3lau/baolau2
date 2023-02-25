@@ -15,11 +15,9 @@
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <a href="#" class="booking-link">
                                 <h2 class="card-title">{{ booking.booking_date }}</h2>
                                 <p class="card-text">{{ booking.booking_time }}</p>
                                 <p class="card-text">{{ booking.name }}</p>
-                            </a>
                             <span>
                                 <form action="{% url 'update_booking' booking.id %}" method="post">
                                     {% csrf_token %}
