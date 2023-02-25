@@ -10,19 +10,14 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 
 
-class BookingList(generic.ListView):
+class BookingList(LoginRequiredMixin, generic.ListView):
     model = Booking
-    queryset = Booking.objects.order_by('-booking_date')
     template_name = 'your_booking.html'
     paginate_by = 6
 
-    def bookings(request):
-    # get the current user's bookings
-        user_bookings = Booking.objects.filter(user=request.user)
-        context = {
-        'bookings': user_bookings
-    }
-        return render(request, 'bookings.html', context)
+    def get_queryset(self):
+        # filter the queryset by the current user
+        return Booking.objects.filter(user=self.request.user)
     
 
 class HomePage(generic.ListView):

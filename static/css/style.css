@@ -210,6 +210,6 @@ footer {
   color: rgb(165, 15, 15);
 } 
 
-#update_booking li {
+#update_booking li, #registration2 li {
   list-style: none;
 }
