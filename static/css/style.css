@@ -135,7 +135,6 @@ nav a {
 footer {
   height: 1%;
   border-top: 5px solid rgb(165, 15, 15);
-  /* position: fixed; */
   bottom: 0;
   left: 0;
   right: 0;
@@ -178,5 +177,16 @@ footer {
   text-align: center;
   margin: 0 auto;
   margin: 20px;
+  padding: 10px;
+}
+
+#signout {
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+#registration {
+  margin: 30px;
   padding: 10px;
 }

@@ -20,19 +20,17 @@
                                 <p class="card-text">{{ booking.booking_time }}</p>
                                 <p class="card-text">{{ booking.name }}</p>
                             </a>
-                            <span class="update_button">
-                                <a href="{% url 'update_booking' %}">
-                                    <button class="update" type="submit">
-                                     Update
-                                    </button>
-                                </a>
+                            <span>
+                                <form action="{% url 'update_booking' booking.id %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-primary">Update</button>
+                                </form>
                             </span>
-                            <span class="delete_button">
-                                <a href="{% url 'delete_booking' %}">
-                                    <button class="delete" type="submit">
-                                        Delete
-                                    </button>
-                                </a>    
+                            <span>
+                                <form action="{% url 'delete_booking' booking.pk %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
                             </span>
                         </div>
                     </div>

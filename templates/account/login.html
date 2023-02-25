@@ -7,12 +7,12 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container" id="registration">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
       <h3>{% trans "Sign In" %}</h3>
 
-      <p>{% blocktrans %}Thanks for visiting Baolau, to leave a review
+      <p>{% blocktrans %}Thanks for visiting Baolau, to make a booking
         please log in. If you don't have an account then
         <a href="{{ signup_url }}">sign up</a> here.{% endblocktrans %}</p>
 
@@ -21,8 +21,6 @@
 
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-
-
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form.as_p }}

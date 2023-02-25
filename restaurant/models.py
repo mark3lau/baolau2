@@ -15,7 +15,3 @@ class Booking(models.Model):
     class Meta:
         ordering = ["-booking_date"]
     
-
-
-
-#   created_by_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True, default=None)

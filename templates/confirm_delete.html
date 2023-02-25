@@ -2,48 +2,33 @@
 
 {% block content %}
 
-<div class="container-fluid">
-    <div class="row">
-
-        <!-- View Your Bookings -->
-        <div id="yourbookings">
-            <h2>Your Bookings</h2>
-        </div>
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for booking in booking_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <a href="#" class="booking-link">
-                                <h2 class="card-title">{{ booking.booking_date }}</h2>
-                                <p class="card-text">{{ booking.booking_time }}</p>
-                                <p class="card-text">{{ booking.name }}</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
-</div>
+<h2>Delete Booking</h2>
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+<form method="post">
+  {% csrf_token %}
+  <p>Are you sure you want to delete the booking for {{ object.name }} on {{ object.booking_date }} at {{ object.booking_time }}?</p>
+  <button type="submit" name="submit">Yes</button>
+  <a href="{% url 'your_booking' %}">Cancel</a>
+</form>
 
 {% endblock content %}
+
+
+<!-- {% for booking in bookings %}
+
+        <div class="delete_booking">
+            <h2>{{ booking.rest }}</h2>
+            <p>{{ reservation.date }}</p>
+            <p>{{ reservation.time }}</p>
+            <form action="{% url 'reservation-delete' reservation.pk %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Cancel Reservation</button>
+            </form>
+        </div>
+{% endfor %} -->
