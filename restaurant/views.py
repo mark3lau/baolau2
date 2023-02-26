@@ -77,6 +77,5 @@ class DeleteBooking(DeleteView):
     
     def delete(self, request, *args, **kwargs):
         booking = self.get_object()
-        messages.success(request, f"The booking for {booking.name} on 
-                         {booking.booking_date} at {booking.booking_time} has been deleted.")
+        messages.success(request, f"The booking for {booking.name} on {booking.booking_date} at {booking.booking_time} has been deleted.")
         return super().delete(request, *args, **kwargs)
