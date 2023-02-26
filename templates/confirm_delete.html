@@ -2,33 +2,16 @@
 
 {% block content %}
 
-<h2>Delete Booking</h2>
-{% if messages %}
-  <ul class="messages">
-    {% for message in messages %}
-      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-  </ul>
-{% endif %}
-<form method="post">
-  {% csrf_token %}
-  <p>Are you sure you want to delete the booking for {{ object.name }} on {{ object.booking_date }} at {{ object.booking_time }}?</p>
-  <button type="submit" name="submit">Yes</button>
-  <a href="{% url 'your_booking' %}">Cancel</a>
-</form>
+  <div class="container">
+    <h1>Confirm deletion</h1>
+    <p>{{ message }}</p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger" name="delete">Delete</button>
+      <a href="{{ cancel_url }}" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+
+{% endblock %}
 
 {% endblock content %}
-
-
-<!-- {% for booking in bookings %}
-
-        <div class="delete_booking">
-            <h2>{{ booking.rest }}</h2>
-            <p>{{ reservation.date }}</p>
-            <p>{{ reservation.time }}</p>
-            <form action="{% url 'reservation-delete' reservation.pk %}" method="post">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-danger">Cancel Reservation</button>
-            </form>
-        </div>
-{% endfor %} -->

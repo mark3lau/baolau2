@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views import generic
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from .models import Booking
 from .forms import BookingForm, UpdateForm
 from django.contrib import messages
@@ -16,7 +16,7 @@ class BookingList(LoginRequiredMixin, generic.ListView):
     paginate_by = 6
 
     def get_queryset(self):
-        # filter the queryset by the current user
+        # Filter the queryset by the current user
         return Booking.objects.filter(user=self.request.user)
     
 
@@ -37,8 +37,9 @@ class MakeBooking(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     success_url = reverse_lazy('your_booking')
     success_message = "Your booking has been made successfully."
 
+    # Set the current user as the owner of the new booking
     def form_valid(self, form):
-        form.instance.user = self.request.user  # set the current user as the owner of the new booking
+        form.instance.user = self.request.user  
         return super().form_valid(form)
 
     def form_invalid(self, form):
@@ -67,26 +68,12 @@ class DeleteBooking(DeleteView):
     template_name = 'confirm_delete.html'
     success_url = reverse_lazy('your_booking')
 
+    def get(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        context = self.get_context_data(object=self.object)
+        return self.render_to_response(context)
+    
     def delete(self, request, *args, **kwargs):
         booking = self.get_object()
-        messages.warning(request, f"Are you sure you want to delete the booking for {booking.name} on {booking.booking_date} at {booking.booking_time}?")
+        messages.success(request, f"The booking for {booking.name} on {booking.booking_date} at {booking.booking_time} has been deleted.")
         return super().delete(request, *args, **kwargs)
-
-
-
-# class MakeBooking(CreateView):
-#     model = Booking
-#     form_class = BookingForm
-#     queryset = Booking.objects.order_by('-booking_date')
-#     template_name = 'make_booking.html'
-#     success_url = reverse_lazy('your_booking')
-
-#     def form_valid(self, form):
-#         response = super().form_valid(form)
-#         messages.success(self.request, 'Your booking has been made successfully.')
-#         return response
-
-#     def form_invalid(self, form):
-#         response = super().form_invalid(form)
-#         messages.error(self.request, 'There was an error processing your booking.')
-#         return response
