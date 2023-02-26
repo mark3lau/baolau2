@@ -2,8 +2,8 @@
 
 ## <u>1. Introduction</u>
 In this project, the objective was to build a Full-Stack site based on business logic used to control a centrally-owned dataset. I will set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
-I decided to create a website for a Chinese restaurant called Baolau. The restaurant will allow users to register an account and log-in in the future once they've registered. They will also have the ability to make, view, update and delete their reservations. It will also contain information about the restaurant and a menu showcasing their cuisine.
-This website is built for people who love Chinese cuisine and are interested in trying out the Baolau restaurant and making a reservation for a dining experience.
+I decided to create a website for a Chinese restaurant called Baolau. The restaurant will allow users to register an account and log-in in the future once they've registered. They will also have the ability to make, view, update and delete their bookings. It will also contain information about the restaurant and a menu showcasing their cuisine.
+This website is built for people who love Chinese cuisine and are interested in trying out the Baolau restaurant and making a booking for a dining experience.
 <hr>
 
 ## <u>2. User Stories</u>
@@ -11,77 +11,73 @@ As a user I want to be able to view the information about the restaurant and und
 
 I want to be able to view the menu of the restaurant so I can understand the food that's on offer.
 
-I want to be able to register an account so that I can make reservations at the restaurant.
+I want to be able to register an account so that I can make bookings at the restaurant.
 
 I want to log in and log out of my account with ease.
 
-I want to be able to view, update and delete my reservations once I've logged in.
+I want to be able to view, update and delete my bookings once I've logged in.
 
 * ### **End user goal** 
-I want to be excited by the restaurant and it's food, and be able to register an account so I can make reservations at the restaurant. I want to be able to easily log in and out and view, update and delete my reservations.
+I want to be excited by the restaurant and it's food, and be able to register an account so I can make bookings at the restaurant. I want to be able to easily log in and out and view, update and delete my bookings.
 
 * ### **Acceptance criteria**
 A clear home page describing the ethos of the restaurant and where you can find the restaurant.
 A navigation bar with options to view the menu and register or log-in as a user.
-
+A registration function for new users to register an account and a log-in function for old users.
+Once logged-in, users should be able to make a reservation, view all their bookings, update existing bookings, and delete bookings.
 
 * ### **Measurement of success**
-   A clear set of instructions at the beginning of the game displayed to the user.
-If the user types a word that is not 5 letters in length, a message will display to the user to type a 5 letter word.
-Clearly color coded clues that display which letters are correct and in the right or wrong positions. 
-If the user has guessed the word correctly within the set number of attempts, it will display a message to the user to show how many guesses it took the user to guess the correct answer.
-If the user has not guessed the correct word, it will display the correct answer to the user and the options for them to either continue playing the game or exit.
-Once the user has either guessed correctly or used up all their attempts, the ability for the user to easily continue playing the game or exit.
-
+Registration should be a simple process with no more than 5 lines of information required.
+Users should be able to log in and log out of their account with ease, with warning messages before confirming their log-out.
+Messages should display to users when they are logged-in, updating and deleting their bookings.
+Users should have all the necessary fields of information required to make a reservation that is useful to the restaurant.
+All fields in forms should be filled out and users should be allowed to progress unless all fields have been completed.
 <hr>
 
 ## <u>3. Features</u>
 
-### **Welcome message and instructions**
-Firstly a colored welcome message to welcome the user to the game will be displayed. A short set of instructions will follow explaining the number of attempts the user has, which color indicates whether the word is in the correct position or if it's in the word but not in the correct position.
-A short message will prompt the user to guess a 5 letter word related to Harry Potter, which is followed by an input message for the user to input their first guess.
+### **Home page and restaurant information**
+A clear and simple home page that captures the look and feel of a high-end Asian-themed restaurant with a hero image in the middle. There's a description of the food at the restaurant and information around how users can find the restaurant and its opening times. 
+A navigation bar at the top allows users to view the menu in detail, register an account if they don't have one, or log-in if they do.
 
 ![welcome-message](screenshots/welcome_page.png "Welcome message and instructions")
 
-### **Clues**
-When the user types a 5 letter word, a message will display showing the user which word they just guessed, highlighted in blue. Below will be the clue, green letters representing the correct letter in the correct position, red letters representing correct letters in the word but in the wrong positions, and dashes representing letters that aren't in the word at all.
-The user will be prompted to enter their next guess below.
+### **Menu**
+Users can view the menu from the navigation bar in the header on a separate page, where the restaurant's starters, main and desserts are displayed.
+
+### **Register an account**
+If the user does not have an account, they can click the Register button that takes them to the register an account page. Here they can create a username, email (optional), and password to register a new account.
 
 ![clues](screenshots/clues.png "Clues")
 
-### **Correct guess**
-If the user guesses the correct word, they will be shown the word they guessed, the clue will include the correct answer lit up in green, and a congratulations message to the user showing how many guesses it took for the user to guess the correct answer. 
-The user will then be given the option to either play again or exit the game.
+### **Log in to your account**
+If the user already has an account, they can click the Sign-in button where they will be prompted to sign in with their registered username and password.
 
 ![correct-guess](screenshots/correct_guess.png "Correct guess")
 
-### **User runs out of attempts**
-If the user runs out of attempts, a message will display telling the user that they have run out of guesses and also what the correct answer was. 
-The user will then be given the option to either play again or exit the game.
+### **Make a booking**
+Once the user has logged in to their account, they can make a new reservation by entering in the details required in the form which includes: name, email, contact number, number of people, date and time.
 
-![max-attempts](screenshots/max_attempts.png "User runs out of attempts")
+### **View, Update and Delete your bookings**
+User can also view their bookings and have the ability to update and delete any existing bookings. To update their bookings, users will be taken to another page where the form reappears that allows them to edit that particular reservation and return them to the view bookings page.
 
 <hr>
 
 ## <u>4. Future features</u>
 
-* ### **Display number of guesses as the user plays the game**
-   A feature that allows the user to know how many guesses they have remaining before they run out of guesses.
+* ### **Warning messages**
+   To include a feature that flashes a warning message to users before they are about to update and delete a booking, and allows them to confirm or cancel the action.
 
-* ### **Username**
-   Allow the user to input a username at the beginning of the game so the display messages can refer to the user by name and speak to them directly.
+* ### **Leave a review**
+   Once users have logged in, to allow them the ability to leave a review of the restaurant and their dining experience, and for this to be displayed on the home page for new and old users to view and comment on.
 
-* ### **Final score**
-   To add a scoring element so that when the user decides to exit the game, a final score will be displayed to show how many words they guessed correctly.
-
-* ### **Display guessed letters not in word**
-   To show the user the letters that they have guessed already as they play the game, and which are not in the correct answer so the user knows which letters not to guess again.
+* ### **Block double bookings**
+   To allow the restaurant to block any double bookings at the same time for the same number of people. Or for the restaurant to specify how many tables are available at a certain time so that it blocks users from making a booking if the tables at the restaurant are full.
 
 <hr>
 
 ## <u>5. Color scheme</u>
-I used the termcolor feature to add some basic color schemes to the game which helps add another dimension rather than the game being in black and white. I chose a cyan blue for the welcome message and instructions, and also to display the word that the user guessed.
-I used a green color to display the letter that was guessed correctly in the correct position. Finally, I chose a red color to display a letter that is in the correct answer but not in the right position. I didn't want to add much more coloring to the game so as to keep it simple and easy to follow for the user.
+I used a mainly blue and red colour scheme with an easy-to-read grey for the text. The red colour is synonymous with Asian culture and symbolises luck and prosperity. The lighter blue adds a nice contrast and fits in with the wall-tile image that is part of the heading of the restaurant. 
 
 ![color_theme_1](screenshots/color_theme_1.png "Cyan blue color theme")
 
@@ -90,16 +86,27 @@ I used a green color to display the letter that was guessed correctly in the cor
 <hr>
 
 ## <u>6. Lucidchart</u>
-I used lucidchart to help me draw up the structure of my game, from the beginning of the game with the welcome message and instructions through the various options the user could take, from displaying the various clues through to user guessing the word correctly or not, and how the application would tackle each possibility. 
+I used lucidchart to structure the restaurant website and its various functions. Taking in the user's journey from the home page through the various options of registering an account to loggin in, and the functions to make a booking, and then to view, update or delete their bookings.
 
 ![lucidchart](screenshots/harry_potter_wordle_lucidchart.jpeg "Lucidchart")
 
 <hr>
 
 ## <u>7. Technology</u>
-* <b>Python</b> was used to run this interactive command-line application.
 
-* The <b>Termcolor</b> module was used to add basic color styles to text in the terminal.
+* <b>HTML:</b> Used to structure the content of my web pages and create the overall layout.
+
+* <b>CSS:</b> Used to style and customize the appearance of my web pages, including the colors, fonts, and layout.
+
+* <b>JavaScript:</b> Used to add interactivity to my web pages, such as form validation and animations.
+
+* <b>Python:</b> Used as the back-end programming language to handle server-side logic, including processing user input, interacting with my database, and generating dynamic content.
+
+* <b>Django:</b> A high-level Python framework used to build the back-end of the website, including handling requests and responses, managing database models, and rendering templates.
+
+* <b>Bootstrap:</b> Used to create a responsive and mobile-friendly user interface, and to take advantage of its pre-built components and styles.
+
+* <b>ElephantSQL:</b> Used to manage and interact with the website's database, including querying data and updating records.
 
 * <b>Gitpod</b> was the application chosen to develop the site.
 
@@ -110,7 +117,9 @@ I used lucidchart to help me draw up the structure of my game, from the beginnin
 ## <u>8. Testing</u>
 
    ### **Code validation**
-   The code has been put through the [Python checker](https://www.pythonchecker.com//) and returned minor errors. Most errors contained lines of code that were longer than 80 characters and unnecessary white spaces, which have all have now been rectified.
+   The code has been put through the [Python checker](https://www.pythonchecker.com//) and returned minor errors. Most errors contained lines of code that were longer than 79 characters and unnecessary white spaces which have been rectified.
+
+   The CSS code has been checked via the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no errors found.
 
    ### **Test cases**
 
@@ -166,14 +175,14 @@ I used lucidchart to help me draw up the structure of my game, from the beginnin
    ### **Gitpod**
    The site was developed using Gitpod. In order to access the Gitpod workspace, follow the steps below:
    
-   1. In Github repository, select the mark3lau/harry_potter_wordle.
+   1. In Github repository, select the mark3lau/baolau2 project.
    2. Click on the green Gitpod button near the top of the repository page, this will open the Gitpod workspace.
-   3. Inside the terminal, you can run the Harry Potter Wordle game by typing "python3 run.py".
+   3. Inside the terminal, you can render Baolau restaurant website in the browser by typing "python3 manage.py runserver".
 
    ### **Heroku**
    The site was deployed to Heroku. The steps to deploy are as follows:
 
-   1. In the Heroku dashboard, click on the harry_potter_wordle app.
+   1. In the Heroku dashboard, click on the baolau2 app.
    2. Click on the 'Deploy' tab near the top of the page. 
    3. In the Deploy page, scroll down to the Manual deploy section. Choose the main branch to deploy, and click Deploy Branch. 
    4. Once the message 'Your app was successfully deployed' is displayed, click on the View button below. The app should now be running in a new tab.

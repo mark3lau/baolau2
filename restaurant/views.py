@@ -18,7 +18,7 @@ class BookingList(LoginRequiredMixin, generic.ListView):
     def get_queryset(self):
         # Filter the queryset by the current user
         return Booking.objects.filter(user=self.request.user)
-    
+
 
 class HomePage(generic.ListView):
     template_name = 'index.html'
@@ -44,13 +44,15 @@ class MakeBooking(LoginRequiredMixin, SuccessMessageMixin, CreateView):
 
     def form_invalid(self, form):
         response = super().form_invalid(form)
-        messages.error(self.request, 'There was an error processing your booking.')
+        messages.error(self.request, 
+                       'There was an error processing your booking.')
         return response
 
 
 class UpdateBooking(UpdateView):
     model = Booking
-    fields = ('name', 'email', 'contact_number', 'number_of_people', 'booking_date', 'booking_time')
+    fields = ('name', 'email', 'contact_number', 'number_of_people', 
+              'booking_date', 'booking_time')
     template_name = 'update_booking.html'
     success_url = reverse_lazy('your_booking')
 
@@ -75,5 +77,6 @@ class DeleteBooking(DeleteView):
     
     def delete(self, request, *args, **kwargs):
         booking = self.get_object()
-        messages.success(request, f"The booking for {booking.name} on {booking.booking_date} at {booking.booking_time} has been deleted.")
+        messages.success(request, f"The booking for {booking.name} on 
+                         {booking.booking_date} at {booking.booking_time} has been deleted.")
         return super().delete(request, *args, **kwargs)
