@@ -2,6 +2,7 @@ from django import forms
 from .models import Booking
 
 
+# Form for users to make a booking
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
@@ -12,6 +13,7 @@ class BookingForm(forms.ModelForm):
         }
 
 
+# Form for users to update a booking
 class UpdateForm(forms.ModelForm):
     class Meta:
         model = Booking
