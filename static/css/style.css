@@ -10,7 +10,7 @@ main{
 }
 
 .wall-tile-container {
-  background-image: url(/static/img/chinese-wall-tile_2.jpg);
+  background-image: url(/static/img/chinese-wall-tile.jpg);
   width: 100%;
   height: 150px;
   overflow: hidden;

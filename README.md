@@ -40,26 +40,42 @@ All fields in forms should be filled out and users should be allowed to progress
 A clear and simple home page that captures the look and feel of a high-end Asian-themed restaurant with a hero image in the middle. There's a description of the food at the restaurant and information around how users can find the restaurant and its opening times. 
 A navigation bar at the top allows users to view the menu in detail, register an account if they don't have one, or log-in if they do.
 
-![welcome-message](screenshots/welcome_page.png "Welcome message and instructions")
+![home-page](static/screenshots/home-page.png "Home Page")
 
 ### **Menu**
 Users can view the menu from the navigation bar in the header on a separate page, where the restaurant's starters, main and desserts are displayed.
 
+![home-page](static/screenshots/menu.png "Menu")
+
 ### **Register an account**
 If the user does not have an account, they can click the Register button that takes them to the register an account page. Here they can create a username, email (optional), and password to register a new account.
 
-![clues](screenshots/clues.png "Clues")
+![register](static/screenshots/register.png "Register")
+![register](static/screenshots/register-error-message.png "Register Error Message")
 
 ### **Log in to your account**
 If the user already has an account, they can click the Sign-in button where they will be prompted to sign in with their registered username and password.
 
-![correct-guess](screenshots/correct_guess.png "Correct guess")
+![login](static/screenshots/login.png "Login")
+![login](static/screenshots/login-error-message.png "Login Error Message")
 
 ### **Make a booking**
 Once the user has logged in to their account, they can make a new reservation by entering in the details required in the form which includes: name, email, contact number, number of people, date and time.
 
+![make-a-booking](static/screenshots/make-a-booking.png "Make A Booking")
+![make-a-booking](static/screenshots/make-a-booking-error-message.png "Make A Booking Error Message")
+
 ### **View, Update and Delete your bookings**
 User can also view their bookings and have the ability to update and delete any existing bookings. To update their bookings, users will be taken to another page where the form reappears that allows them to edit that particular reservation and return them to the view bookings page.
+
+![view-your-bookings](static/screenshots/view-your-bookings.png "View Your Bookings")
+![update-your-booking](static/screenshots/update-your-booking.png "Update Your Booking")
+![delete-booking](static/screenshots/delete-booking.png "Delete Booking")
+
+### **Logout**
+Users can logout by clicking the logout link, which will take them to a new page that asks them if they're sure that they want to log out. When the user clicks sign out, they will be taken back to the home page and logged out of their account.
+
+![logout](static/screenshots/sign-out.png "Logout")
 
 <hr>
 
@@ -123,47 +139,48 @@ I used lucidchart to structure the restaurant website and its various functions.
 
    ### **Test cases**
 
-   * #### <u>Welcome message and instructions</u>
-      The user is presented with a welcome message and instructions to the game. An input box message should show the user where to type their first guess.
+   * #### <u>Home Page and Menu</u>
+      The user is taken to the home page with details of the restaurant displayed. In the header, there are links to the 'Home' page, 'Menu', 'Register', and 'Login'.
+      In the footer there are 5 social media links for 'Facebook', 'Twitter', 'Instagram', 'YouTube', 'LinkedIn'. 
+      A link to the menu takes the user to a menu page displaying the restaurant's starters, main and desserts. There is a prompt for the user to register an account if they don't have one already, or sign in to an existing account.
 
-   * #### <u>Clues</u>
-      As the user types their 5 letter word, a display message will show the user what word they just typed, highlighted in cyan blue, followed on the next line by the clue. Green letters show letters that are in the correct position, red letters show letters that are in the answer but not in the correct position, and dashes show letters that are not in the answer.
-      The user is then prompted to enter their next guess.
+   * #### <u>Register An Account</u>
+      When the user clicks on the 'register' link, they're taken to a new page which prompts them to input details for 'username', 'email (optional)', 'password' and 'password (again)'. If any of these fields are not filled in or filled in incorrectly, a warning message flashes to fill the field in properly. 
+      If all fields have been filled in properly and the user clicks 'sign up', they're taken to the home page with a new navigation bar of options. 
+      They can view the 'Menu', 'Make a Booking, 'View Your Bookings' and 'Logout'.
 
-      ![clues](screenshots/clues.png "Clues")
+   * #### <u>Login</u>
+      When the user clicks on the 'login' link, they're taken to a new page which prompts them to input details for 'username' and 'password'. There is also the option for a user to tick the 'Remember Me' box so that their device remembers their login details. Once they click Sign In, they're taken to the home page and their account.
 
-   * #### <u>Incorrect input</u>
-      If the user does not input a 5 letter word, a display message will tell the user that they have not typed a 5 letter word and to try again. This attempt will not count towards the total number of attempts.
+   * #### <u>Make A Booking</u>
+      When the user is in the 'Make a Booking' page, input fields are displayed for 'Name', 'Email', 'Contact Number', 'Number of People', 'Booking Date' and 'Booking Time'. If any of these fields are not filled in or filled in incorrectly, a warning message flashes to fill the field in properly.
+      Once all fields have been filled in correctly and the user clicks submit, they're taken to the 'View Your Bookings' page with a success message of 'Your booking has been made successfully'.
 
       ![incorrect-input](screenshots/incorrect_input.png "Incorrect input")
 
-   * #### <u>Correct guess</u>
-      If the user guesses correctly, a display message will show the word they guessed, highlighted in cyan, followed by the correct answer highlighted in green as the clue. The following line will show a congratulations message and the number of guesses it took the user to guess the correct answer. The user will be given the option of playing again by pressing Enter, or typing 'mischief managed' to exit the game. 
-      If they press Enter, the game will restart back to the beginning displaying the welcome message and instructions.
-      If they decide to exit the game after typing 'mischief managed', a thank you for playing message will be displayed to the user.
+   * #### <u>View Your Bookings</u>
+      In the 'View Your Bookings' page, the user's new booking will be displayed below which has two button options, one to 'Update' the booking, and one to 'Delete' the booking.
+      If a user clicks 'Update', they're taken to a new page with a new form to update the same information fields, and when the user clicks 'Submit', they're taken back to the 'View Your Bookings' page with their booking updated.
+      If a user clicks 'Delete', the booking will be deleted immediately and a success message will be displayed indicating which booking has been deleted.
 
       ![correct-guess](screenshots/correct_guess.png "Correct guess")
 
       ![play-again](screenshots/play_again.png "Play again")
 
-   * #### <u>Incorrect guess and run out of attempts</u>
-      If the user has guessed incorrectly and run out of attempts, a message will display telling the user that they have used up all their guesses, and what the correct answer was. The user will be given the option of playing again by pressing Enter, or typing 'mischief managed' to exit the game.
+   * #### <u>Logout</u>
+      If the user wishes to logout and click the 'Logout' link, they're taken to a new page that asks if the user is sure they want to log out and a 'Sign Out' button. If the 'Sign Out' is clicked, the user is logged out of their account and returned to the home page.
 
       ![max-attempts](screenshots/max_attempts.png "User runs out of attempts")
 
       ![exit-game](screenshots/exit_game.png "Exit game")
 
-   * #### <u>Capitals changed to lower case</u>
-      If the user uses capitals whilst typing their guesses, these will be converted to lower case so they match the values of the answer and a comparison can be made correctly. This also applies if the user wants to exit the game, the words 'mischief managed' are also changed to lower case so the user can properly exit the game even if they have typed in capitals.
-
-      ![lower-case-1](screenshots/capitals_lower_case_1.png "Capitals changed to lower case in user guesses")
-
-      ![lower-case-2](screenshots/capitals_lower_case_2.png "Capitals changed to lower case to exit game")
 
    ### **Fixed bugs**
-   * The answer variable was originally generating a random word from the worksheet but displaying it as a list which was fixed by changing it to an array, this was added to the get_random_word function after the answer variable.
+   * I had not added the '<int:pk>' path converter on my 'update_booking' and 'delete_booking' url paths which meant these pages were not rendering properly and were throwing up errors. These were fixed once the errors were identified.
    
-   * I had to make sure the user inputs were converted into lower cases, and also the answers being generated from the worksheet were also converted to lower cases so that the values matched. Some values were not matching previously therefore failing to make the comparisons to generate the clues.
+   * In my model I had not included the foreignkey attribute for users and therefore every user could view the same bookings once a new booking was made.
+
+   * In my UpdateBooking view, I hadn't included the primary key from the key word arguments object and therefore the user wasn't able to update their bookings properly as their bookings weren't being retrieved and was throwing an error. This was fixed once the issue had been identified.
 
    ### **Unfixed bugs**
    There are no known unfixed bugs.
@@ -177,7 +194,7 @@ I used lucidchart to structure the restaurant website and its various functions.
    
    1. In Github repository, select the mark3lau/baolau2 project.
    2. Click on the green Gitpod button near the top of the repository page, this will open the Gitpod workspace.
-   3. Inside the terminal, you can render Baolau restaurant website in the browser by typing "python3 manage.py runserver".
+   3. Inside the terminal, you can render the Baolau restaurant website in the browser by typing "python3 manage.py runserver".
 
    ### **Heroku**
    The site was deployed to Heroku. The steps to deploy are as follows:
@@ -192,4 +209,7 @@ I used lucidchart to structure the restaurant website and its various functions.
 ## <u>10. Credits</u>
 
    ### **Harry Potter words**
-   The 5 letter words related to Harry Potter were taken from [Nerds Chalk](https://nerdschalk.com/5-letter-harry-potter-words-list-find-a-hint-for-harry-potter-wordle-easily/).
+   The chinese-food image was taken from the [Park Chinois](https://parkchinois.com/) restaurant in Mayfair, London. It was part of their Chinese New Year offering.
+
+   The chinese-wall-tile image was taken from the [Deposit Photos website](https://depositphotos.com/95041990/stock-illustration-vintage-seamless-wall-tiles-of.html).
+

@@ -55,6 +55,7 @@ class UpdateBooking(UpdateView):
               'booking_date', 'booking_time')
     template_name = 'update_booking.html'
     success_url = reverse_lazy('your_booking')
+    success_message = "Your booking has been updated successfully."
 
     def get_queryset(self):
         queryset = super().get_queryset()
