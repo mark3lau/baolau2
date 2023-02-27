@@ -10,6 +10,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 
 
+# To view the user's bookings
 class BookingList(LoginRequiredMixin, generic.ListView):
     model = Booking
     template_name = 'your_booking.html'
@@ -20,16 +21,19 @@ class BookingList(LoginRequiredMixin, generic.ListView):
         return Booking.objects.filter(user=self.request.user)
 
 
+# To view the home page
 class HomePage(generic.ListView):
     template_name = 'index.html'
     queryset = Booking.objects.none()
 
 
+# To view the menu
 class Menu(generic.ListView):
     template_name = 'menu.html'
     queryset = Booking.objects.none()
 
 
+# For the user to make a booking
 class MakeBooking(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Booking
     form_class = BookingForm
@@ -49,6 +53,7 @@ class MakeBooking(LoginRequiredMixin, SuccessMessageMixin, CreateView):
         return response
 
 
+# For the user to update an existing booking
 class UpdateBooking(UpdateView):
     model = Booking
     fields = ('name', 'email', 'contact_number', 'number_of_people', 
@@ -66,6 +71,7 @@ class UpdateBooking(UpdateView):
         return Booking.objects.get(pk=booking_id) 
 
 
+# For the user to delete an existing booking
 class DeleteBooking(DeleteView):
     model = Booking
     template_name = 'confirm_delete.html'

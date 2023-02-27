@@ -1,3 +1,5 @@
+/* Main body */
+
 body {
     font-family: 'Montserrat Alternates', sans-serif;
     color: #595757;
@@ -8,6 +10,8 @@ body {
 main{
   flex-grow: 1;
 }
+
+/* Site heading and background image */
 
 .wall-tile-container {
   background-image: url(/static/img/chinese-wall-tile.jpg);
@@ -37,6 +41,8 @@ h1 {
   font-weight: bold;
 }
 
+/* Subheading on home page */
+
 .subheading {
   font-weight: bold;
   font-size: 18px;
@@ -44,6 +50,8 @@ h1 {
   margin: 50px 80px;
   letter-spacing: 2px;
 }
+
+/* Navigation bar */
 
 #main-nav {
   margin-left: 65%;
@@ -66,6 +74,27 @@ nav a {
   text-decoration: none;
 }
 
+/* Menu */
+
+.menu {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid rgb(165, 15, 15);
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu_title {
+  color: rgb(165, 15, 15);
+} 
+
+/*  About our food section */
+
 #about {
   display: flex;
   padding: 2rem;
@@ -76,6 +105,8 @@ nav a {
   padding: 20px;
   border-right: 2px solid rgb(165, 15, 15);
 }
+
+/* Prompt to register an account section */
 
 .register-container {
   height: 70%;
@@ -105,15 +136,7 @@ nav a {
   border: 1px solid rgb(34, 112, 201);
 }
 
-#contact {
-  display: flex;
-  padding: 2rem;
-}
-
-.contact-details {
-  padding: 20px;
-  border-right: 2px solid rgb(165, 15, 15);
-}
+/* Hero image */
 
 .hero-image {
   width: 100%;
@@ -124,6 +147,18 @@ nav a {
   padding: 0;
 }
 
+/* Contact details page */
+
+#contact {
+  display: flex;
+  padding: 2rem;
+}
+
+.contact-details {
+  padding: 20px;
+  border-right: 2px solid rgb(165, 15, 15);
+}
+
 .map {
   padding: 20px;
   right: 5px;
@@ -131,7 +166,7 @@ nav a {
   position: absolute;
 }
 
-/* Social media links */
+/* Footer with social media links */
 
 footer {
   height: 1%;
@@ -167,12 +202,16 @@ footer {
   font-size: small;
 }
 
+/* Make a Booking */
+
 #makebooking {
   text-align: center;
   margin: 0 auto;
   margin: 20px;
   padding: 10px;
 }
+
+/* Your bookings */
 
 #yourbookings h2, .menu_title {
   text-align: center;
@@ -181,34 +220,22 @@ footer {
   padding: 10px;
 }
 
+/* Sign out */
+
 #signout {
   margin: 10px;
   padding: 5px;
   text-align: center;
 }
 
+/* Registration and update booking */
+
 #registration, #update_booking {
   margin: 30px;
   padding: 10px;
   text-align: center;
-}
-
-.menu {
-  text-align: center;
-  padding: 5px;
-  border: 1px solid rgb(165, 15, 15);
-  max-width: fit-content;
-  margin: 0 auto;
-  margin-bottom: 50px;
-}
-
-.menu ul {
   list-style: none;
 }
-
-.menu_title {
-  color: rgb(165, 15, 15);
-} 
 
 #update_booking li, #registration2 li {
   list-style: none;

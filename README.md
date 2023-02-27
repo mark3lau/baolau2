@@ -18,7 +18,7 @@ I want to log in and log out of my account with ease.
 I want to be able to view, update and delete my bookings once I've logged in.
 
 * ### **End user goal** 
-I want to be excited by the restaurant and it's food, and be able to register an account so I can make bookings at the restaurant. I want to be able to easily log in and out and view, update and delete my bookings.
+I want to be excited by the restaurant and its food, and be able to register an account so I can make bookings at the restaurant. I want to be able to easily log in and out and view, update and delete my bookings.
 
 * ### **Acceptance criteria**
 A clear home page describing the ethos of the restaurant and where you can find the restaurant.
@@ -51,19 +51,16 @@ Users can view the menu from the navigation bar in the header on a separate page
 If the user does not have an account, they can click the Register button that takes them to the register an account page. Here they can create a username, email (optional), and password to register a new account.
 
 ![register](static/screenshots/register.png "Register")
-![register](static/screenshots/register-error-message.png "Register Error Message")
 
 ### **Log in to your account**
 If the user already has an account, they can click the Sign-in button where they will be prompted to sign in with their registered username and password.
 
 ![login](static/screenshots/login.png "Login")
-![login](static/screenshots/login-error-message.png "Login Error Message")
 
 ### **Make a booking**
 Once the user has logged in to their account, they can make a new reservation by entering in the details required in the form which includes: name, email, contact number, number of people, date and time.
 
 ![make-a-booking](static/screenshots/make-a-booking.png "Make A Booking")
-![make-a-booking](static/screenshots/make-a-booking-error-message.png "Make A Booking Error Message")
 
 ### **View, Update and Delete your bookings**
 User can also view their bookings and have the ability to update and delete any existing bookings. To update their bookings, users will be taken to another page where the form reappears that allows them to edit that particular reservation and return them to the view bookings page.
@@ -95,16 +92,14 @@ Users can logout by clicking the logout link, which will take them to a new page
 ## <u>5. Color scheme</u>
 I used a mainly blue and red colour scheme with an easy-to-read grey for the text. The red colour is synonymous with Asian culture and symbolises luck and prosperity. The lighter blue adds a nice contrast and fits in with the wall-tile image that is part of the heading of the restaurant. 
 
-![color_theme_1](screenshots/color_theme_1.png "Cyan blue color theme")
-
-![color_theme_2](screenshots/color_theme_2.png "Green and red color theme")
+![home-page](static/screenshots/home-page.png "Home Page")
 
 <hr>
 
 ## <u>6. Lucidchart</u>
 I used lucidchart to structure the restaurant website and its various functions. Taking in the user's journey from the home page through the various options of registering an account to loggin in, and the functions to make a booking, and then to view, update or delete their bookings.
 
-![lucidchart](screenshots/harry_potter_wordle_lucidchart.jpeg "Lucidchart")
+![lucidchart](static/screenshots/lucidchart.png "Lucidchart")
 
 <hr>
 
@@ -149,30 +144,26 @@ I used lucidchart to structure the restaurant website and its various functions.
       If all fields have been filled in properly and the user clicks 'sign up', they're taken to the home page with a new navigation bar of options. 
       They can view the 'Menu', 'Make a Booking, 'View Your Bookings' and 'Logout'.
 
+      ![register](static/screenshots/register-error-message.png "Register Error Message")
+
    * #### <u>Login</u>
       When the user clicks on the 'login' link, they're taken to a new page which prompts them to input details for 'username' and 'password'. There is also the option for a user to tick the 'Remember Me' box so that their device remembers their login details. Once they click Sign In, they're taken to the home page and their account.
+
+      ![login](static/screenshots/login-error-message.png "Login Error Message")
 
    * #### <u>Make A Booking</u>
       When the user is in the 'Make a Booking' page, input fields are displayed for 'Name', 'Email', 'Contact Number', 'Number of People', 'Booking Date' and 'Booking Time'. If any of these fields are not filled in or filled in incorrectly, a warning message flashes to fill the field in properly.
       Once all fields have been filled in correctly and the user clicks submit, they're taken to the 'View Your Bookings' page with a success message of 'Your booking has been made successfully'.
 
-      ![incorrect-input](screenshots/incorrect_input.png "Incorrect input")
+      ![make-a-booking](static/screenshots/make-a-booking-error-message.png "Make A Booking Error Message")
 
    * #### <u>View Your Bookings</u>
       In the 'View Your Bookings' page, the user's new booking will be displayed below which has two button options, one to 'Update' the booking, and one to 'Delete' the booking.
       If a user clicks 'Update', they're taken to a new page with a new form to update the same information fields, and when the user clicks 'Submit', they're taken back to the 'View Your Bookings' page with their booking updated.
       If a user clicks 'Delete', the booking will be deleted immediately and a success message will be displayed indicating which booking has been deleted.
 
-      ![correct-guess](screenshots/correct_guess.png "Correct guess")
-
-      ![play-again](screenshots/play_again.png "Play again")
-
    * #### <u>Logout</u>
       If the user wishes to logout and click the 'Logout' link, they're taken to a new page that asks if the user is sure they want to log out and a 'Sign Out' button. If the 'Sign Out' is clicked, the user is logged out of their account and returned to the home page.
-
-      ![max-attempts](screenshots/max_attempts.png "User runs out of attempts")
-
-      ![exit-game](screenshots/exit_game.png "Exit game")
 
 
    ### **Fixed bugs**
