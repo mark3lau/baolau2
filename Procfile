@@ -1,1 +1,1 @@
-web: gunicorn baolau2.wsgi
+web: gunicorn baolau.wsgi
