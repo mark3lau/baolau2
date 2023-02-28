@@ -14,7 +14,7 @@ main{
 /* Site heading and background image */
 
 .wall-tile-container {
-  background-image: url(/static/img/chinese-wall-tile.jpg);
+  background-image: url(https://res.cloudinary.com/dlvxdprfe/image/upload/v1677536409/static/img/chinese-wall-tile.7d4969b9f320.jpg);
   width: 100%;
   height: 150px;
   overflow: hidden;
