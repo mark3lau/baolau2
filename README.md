@@ -199,7 +199,7 @@ I used lucidchart to structure the restaurant website and its various functions.
 
 ## <u>10. Credits</u>
 
-   ### **Harry Potter words**
+   ### **Images**
    The chinese-food image was taken from the [Park Chinois](https://parkchinois.com/) restaurant in Mayfair, London. It was part of their Chinese New Year offering.
 
    The chinese-wall-tile image was taken from the [Deposit Photos website](https://depositphotos.com/95041990/stock-illustration-vintage-seamless-wall-tiles-of.html).
